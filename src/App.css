@@ -8,3 +8,16 @@
   height: 100vh;
 }
 
+.card{
+  margin: auto;
+  background-color: black;
+  border: 5px solid red;
+  width: 400px;
+}
+.card input{
+  margin-left: 15px
+}
+.save{
+  text-align: right;
+  margin-top: 5px;
+}

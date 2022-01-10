@@ -4,9 +4,9 @@ import Button from 'react-bootstrap/Button'
 const Linha = () => {
     return (
         <div className='linha'>
-            <span>Linha</span>
+            <span>brendon</span>
             <span>
-            <Button variant="success">Primary</Button>{' '}
+            <Button variant="success"><i className="fas fa-check-circle"></i></Button>{' '}
             <Button variant="danger"><i className="fas fa-trash-alt"></i></Button>{' '}
             </span>
                
