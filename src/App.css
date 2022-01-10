@@ -3,19 +3,23 @@
   background-color: black;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0px;
   width: 100vw;
   height: 100vh;
 }
 
-.card{
-  margin: auto;
+
+.configcard{
   background-color: black;
   border: 5px solid red;
   width: 400px;
 }
 .card input{
-  margin-left: 15px
+  margin-left: 15px;
+  border-radius: 5px;
+  border-color: transparent;
 }
 .save{
   text-align: right;
