@@ -1,12 +1,24 @@
-import React from 'react'
-import './CardComponent.css'
+import React, { useState } from "react";
+import "./CardComponent.css";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Linha from "./Linha";
+
+import { useSelector, useDispatch } from "react-redux";
+import { createTask } from "../store/actions/actions";
+
 const CardComponent = () => {
-    return (
-        <div>
-          <div>
+  const [tarefa, setTarefa] = useState("");
+  const dispatch = useDispatch();
+  const tasks = useSelector((state) => state.task.todo);
+  function criarTask(prop) {
+    dispatch(createTask(prop));
+    setTarefa("");
+  }
+
+  return (
+    <div>
+      <div>
         {["Secondary"].map((variant, idx) => (
           <Card
             bg={variant.toLowerCase()}
@@ -17,26 +29,37 @@ const CardComponent = () => {
             <Card.Body>
               <Card.Title style={{ textAlign: "left" }}>To do:</Card.Title>
               <Card.Text>
-                <Linha />
-                <Linha />
-                <Linha />
-                <Linha />
-                <Linha />
-                <Linha />
+                {tasks.length === 0
+                  ? "No tasks"
+                  : tasks.map((nome, indice) => {
+                      return (
+                        <Linha key={indice} nome={nome} indice={indice}></Linha>
+                      );
+                    })}
               </Card.Text>
               <span>Task</span>
-              <input maxLength={25} type="text" placeholder="What do you need to do?" />
+              <input
+                value={tarefa}
+                maxLength={25}
+                type="text"
+                placeholder="What do you need to do?"
+                onChange={(e) => setTarefa(e.target.value)}
+              />
               <div className="save">
-                <Button variant="primary">
+                <Button
+                  disabled={!tarefa ? true : false}
+                  variant="primary"
+                  onClick={() => criarTask(tarefa)}
+                >
                   Save item
                 </Button>
               </div>
             </Card.Body>
           </Card>
         ))}
-      </div>  
-        </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
-export default CardComponent
+export default CardComponent;

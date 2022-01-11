@@ -1,0 +1,13 @@
+.configcard{
+    background-color: black;
+    width: 400px;
+  }
+  .card input{
+    margin-left: 15px;
+    border-radius: 5px;
+    border-color: transparent;
+  }
+  .save{
+    text-align: right;
+    margin-top: 5px;
+  }

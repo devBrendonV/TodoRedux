@@ -1,15 +1,21 @@
-const estadoinicial = []
+const estadoinicial ={
+    todo:[]
+}
   export default function Task(state = estadoinicial, action) {
     switch (action.type) {
       case "Create":
         return {
-          ...state,
-          state: state.push(action.payload)
+            ...state,
+          todo: [...state.todo,action.payload]
         };
         case "Delete":
         return{
-            ...state,
-            state: state.slice(action.payload-1,action.payload)
+            ...state.todo,
+            todo: [...state.todo].filter((a,indice)=>{
+              if(action.payload != indice){
+                return a
+              }
+            })
         };
       default:
         return estadoinicial;
