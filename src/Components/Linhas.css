@@ -1,20 +1,30 @@
-.linha{
-    background-color: rgb(156, 154, 154);
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    align-items: center;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid rgb(117, 116, 116);
-    margin-bottom: 0.5px;
+.linha {
+  background-color: rgb(156, 154, 154);
+  display: flex;
+  justify-content: space-between;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(117, 116, 116);
+  margin-bottom: 0.5px;
 }
-span::first-letter{
-    text-transform: uppercase;
+span::first-letter {
+  text-transform: uppercase;
 }
-.linha span button{
-    margin-left: 5px;
+
+.done {
+  background-color: green;
 }
-.done{
-    background-color: green;
+.nametask {
+  overflow-x: auto;
+  font-size: 25px;
+  width: 80%;
+  height: 40px;
+}
+.botaolinha {
+  display: flex;
+}
+.botaolinha button {
+  margin-left: 5px;
 }

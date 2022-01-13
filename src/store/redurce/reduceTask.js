@@ -11,9 +11,9 @@ const estadoinicial ={
         case "Delete":
         return{
             ...state.todo,
-            todo: [...state.todo].filter((a,indice)=>{
-              if(action.payload != indice){
-                return a
+            todo: [...state.todo].filter((todo)=>{
+              if(action.payload != todo.id){
+                return todo
               }
             })
         };

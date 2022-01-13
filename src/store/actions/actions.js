@@ -1,15 +1,15 @@
 
-export const deleteTask = (prop)=>{
+export const deleteTask = (todoTaskDelete)=>{
     return {
         type: "Delete",
-        payload: prop
+        payload: todoTaskDelete
     }
 }
 
 
-export const createTask = (prop)=>{
+export const createTask = (todoTask)=>{
     return {
         type: "Create",
-        payload: prop
+        payload: todoTask
     }
 }

@@ -10,17 +10,17 @@ const Linha = (prop) => {
     dispatch(deleteTask(prop));
   }
   return (
-    <div key={prop.indice} className={done ? "linha done" : "linha"}>
-      <span>{prop.nome}</span>
-      <span>
+    <span key={prop.delete} className={done ? "linha done" : "linha"}>
+      <span className="nametask">{prop.task}</span>
+      <span className="botaolinha" >
         <Button onClick={() => setDone(!done)} variant="success">
           <i className="fas fa-check-circle"></i>
         </Button>
-        <Button onClick={() => deletarTask(prop.indice)} variant="danger">
+        <Button onClick={() => deletarTask(prop.delete)} variant="danger">
           <i className="fas fa-trash-alt"></i>
         </Button>
       </span>
-    </div>
+    </span>
   );
 };
 
