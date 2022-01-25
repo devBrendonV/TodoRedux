@@ -56,5 +56,7 @@ export const Botao = styled.button`
   border: 1px solid #aeaeb0;
   margin: 5px 0; 
   display: flex;
+  padding: 10px;
   justify-content: flex-end;
+  font-size: 1.2rem;
 `;

@@ -15,11 +15,10 @@ const Linha = (prop) => {
         <span
           style={!done ? { color: "" } : { color: "white" }}
         >
-          {" "}
           {prop.task}
         </span>
  
-        <span>
+        <span className="AB">
           <Botao color={'#4ade80'} hidden={done} onClick={() => setDone(!done)} done>
             <i className="fas fa-check-circle"></i>
           </Botao>

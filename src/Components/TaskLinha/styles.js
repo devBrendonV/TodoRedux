@@ -4,9 +4,9 @@ export const Container = styled.div`
   background-color: ${prop => prop.done ? '#86efac' : '#FFF'};
   display: flex;
   justify-content: space-between;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   align-items: center;
-  padding-left: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 10px;
   border-radius: 5px;
   margin-bottom: 5px;
 
@@ -16,7 +16,7 @@ export const Container = styled.div`
     overflow-y: hidden;
     font-size: 1.5rem;
     width: 80%;
-    height: 40px;
+    height: 35px;
   }
   span:nth-child(1):first-letter {
     text-transform: uppercase;
@@ -33,7 +33,10 @@ export const Botao = styled.button`
       return a
     }
   })};
+  border: 1px solid #a7a7ab;
   width: auto;
   height: auto;
+  color: #555557;
+  padding: 5px;
   margin: 0 5px;
 `;

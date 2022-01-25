@@ -1,5 +1,4 @@
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import CardComponent from "./Components/TaskCard";
 
 function App() {
