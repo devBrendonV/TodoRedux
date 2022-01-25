@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-import "./CardComponent.css";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import Linha from "./Linha";
+import Linha from "../TaskLinha";
 import { v4 as uuidv4 } from "uuid";
-
 import { useSelector, useDispatch } from "react-redux";
-import { createTask } from "../store/actions/actions";
+import { createTask } from "../../store/actions/actions";
+import { Botao, Container, Tasks,Input } from "./styles";
 
 const CardComponent = () => {
   const [tarefa, setTarefa] = useState("");
@@ -17,24 +14,16 @@ const CardComponent = () => {
     dispatch(createTask({ todoTask: prop, id: id }));
     setTarefa("");
   }
-
   return (
-    <div className="main">
+    <Container>
       <div>
-        {[""].map((variant, idx) => (
-          <Card
-            bg={variant.toLowerCase()}
-            key={idx}
-            text={variant.toLowerCase() === "light" ? "dark" : "white"}
-            className="mb-2 "
-          >
-            <Card.Body className="configcard">
-              <Card.Title>
+            <span>
+              <span>
                 <h1>To do:</h1>
-              </Card.Title>
-              <Card.Text className="tasks">
+              </span>
+              <Tasks notasks={tasks.length > 0}>
                 {tasks.length === 0 ? (
-                  <span className="notask">
+                  <span >
                     <span>No tasks</span>
                   </span>
                 ) : (
@@ -49,8 +38,9 @@ const CardComponent = () => {
                     );
                   })
                 )}
-              </Card.Text>
-              <div className="todoinput">
+              </Tasks>
+              <Input>
+                <div>
                 <label id="taskinput">Task </label>
                 <input
                   id="taskinput"
@@ -65,21 +55,20 @@ const CardComponent = () => {
                   placeholder="What do you need to do?"
                   onChange={(e) => setTarefa(e.target.value)}
                 />
-              </div>
-              <div className="save">
-                <Button
+                </div>
+              <div>
+                <Botao
                   disabled={tarefa.trim().length > 0 ? false : true}
                   variant="primary"
                   onClick={() => criarTask(tarefa)}
                 >
                   Save item
-                </Button>
+                </Botao>
               </div>
-            </Card.Body>
-          </Card>
-        ))}
+              </Input>
+            </span>
       </div>
-    </div>
+    </Container>
   );
 };
 

@@ -10,7 +10,7 @@ const estadoinicial ={
         };
         case "Delete":
         return{
-            ...state.todo,
+            ...state,
             todo: [...state.todo].filter((todo)=>{
               if(action.payload != todo.id){
                 return todo
