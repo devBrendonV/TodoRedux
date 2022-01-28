@@ -17,6 +17,12 @@ const estadoinicial ={
               }
             })
         };
+        case 'Clear':
+        return{
+          ...state,
+          todo : []
+        }
+
       default:
         return estadoinicial;
     }

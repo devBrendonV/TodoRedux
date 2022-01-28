@@ -2,11 +2,14 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: #dce0de;
-  width: 85%;
-  height: 80%;
+  width: 400px;
+  height: 600px;
   border: 0.5px solid #bababa;
   padding: 20px;
   color: #71717a;
+  h1{
+    color:  #5297f7;
+  }
   div:nth-child(0) {
     display: flex;
     flex-direction: column;
@@ -21,8 +24,9 @@ export const Tasks = styled.div`
   overflow-y: auto;
   margin-bottom: 20px;
   width: auto;
-  height: 500px;
+  height: 400px;
   display: flex;
+  font-size: 25px;
   flex-direction: column;
   justify-content: ${(prop) => (prop.notasks ? "" : "center")};
   align-items: ${(prop) => (prop.notasks ? "" : "center")};
@@ -31,32 +35,34 @@ export const Tasks = styled.div`
 export const Input = styled.div`
   display: flex;
   flex-direction: column;
-  label {
-    font-size: 18px;
-  }
   input {
-    width: 80%;
+    padding: 10px;
+    width: 100%;
     font-size:1rem;
     border-radius: 5px;
     border-color: transparent;
+    margin-bottom: 10px;
   }
   div:nth-child(1) {
     display: flex;
     justify-content: flex-end;
   }
-  div:nth-child(2) {
-    display: flex;
-    justify-content: flex-end;
-  }
 `;
 
+export const LocalBotoes = styled.div`
+  display: flex;
+  justify-content: center;
+  
+`
+
 export const Botao = styled.button`
-  background-color: ${(prop) => (prop.disabled ? "#d1cdcd" : "#2626e0")};
+  background-color: ${(prop) => (prop.disabled ? "#73bbfa" : prop.background)};
   color: ${(prop) => (prop.disable ? "#71717a" : "white")};
   border: 1px solid #aeaeb0;
-  margin: 5px 0; 
+  margin: 5px 5px; 
   display: flex;
   padding: 10px;
   justify-content: flex-end;
   font-size: 1.2rem;
+  border-radius: 5px;
 `;

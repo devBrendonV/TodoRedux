@@ -13,3 +13,9 @@ export const createTask = (todoTask)=>{
         payload: todoTask
     }
 }
+
+export const clearTasks = ()=>{
+    return{
+        type:'Clear'
+    }
+}

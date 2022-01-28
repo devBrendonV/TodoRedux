@@ -2,14 +2,23 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: ${prop => prop.done ? '#86efac' : '#FFF'};
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+ 
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 5px;
 
+  div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+  }
+  div:nth-child(1) button{
+    display: none;   
+  }
+  div:nth-child(1):hover button{
+    display: block;   
+  }
   span:nth-child(1){
     color: ${prop => prop.done ? 'white' : '#71717a'};
     overflow-x: auto;
@@ -22,10 +31,11 @@ export const Container = styled.div`
     text-transform: uppercase;
   }
 
-  span:nth-child(2){
+  div:nth-child(2){
     display: flex;
     margin-left: 5px;
   }
+  
 `;
 export const Botao = styled.button`
   background-color: ${(prop) => ['#4ade80','#f43f5e'].filter((a)=>{
