@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.li`
   background-color: #86efac;
   font-size:1rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 5px;
+  list-style: none;
 
   div:nth-child(1){
     display: flex;
@@ -39,11 +40,7 @@ export const Container = styled.div`
   
 `;
 export const Botao = styled.button`
-  background-color: ${(prop) => ['#4ade80','#f43f5e'].filter((a)=>{
-    if(a === prop.color){
-      return a
-    }
-  })};
+  background-color: ${(prop) => prop.color};
   border: 1px solid #a7a7ab;
   width: auto;
   height: auto;

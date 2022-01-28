@@ -5,6 +5,7 @@ export const Container = styled.div`
   width: 400px;
   height: 600px;
   border: 0.5px solid #bababa;
+  border-radius: 5px;
   padding: 20px;
   color: #71717a;
   h1{
@@ -20,16 +21,18 @@ export const Container = styled.div`
   }
 `;
 
-export const TaskItem = styled.div`
+export const TaskItem = styled.ul`
+  padding: 0;
   overflow-y: auto;
   margin-bottom: 20px;
   width: auto;
-  height: 400px;
+  height: 380px;
   display: flex;
   font-size: 1.5rem;
   flex-direction: column;
   justify-content: ${(prop) => (prop.notasks ? "" : "center")};
   align-items: ${(prop) => (prop.notasks ? "" : "center")};
+  align-content: space-between;
 `;
 
 export const Input = styled.div`
@@ -41,7 +44,6 @@ export const Input = styled.div`
     font-size:1rem;
     border-radius: 5px;
     border-color: transparent;
-    margin-bottom: 10px;
   }
   div:nth-child(1) {
     display: flex;
