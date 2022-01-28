@@ -20,13 +20,13 @@ export const Container = styled.div`
   }
 `;
 
-export const Tasks = styled.div`
+export const TaskItem = styled.div`
   overflow-y: auto;
   margin-bottom: 20px;
   width: auto;
   height: 400px;
   display: flex;
-  font-size: 25px;
+  font-size: 1.5rem;
   flex-direction: column;
   justify-content: ${(prop) => (prop.notasks ? "" : "center")};
   align-items: ${(prop) => (prop.notasks ? "" : "center")};
@@ -56,7 +56,7 @@ export const LocalBotoes = styled.div`
 `
 
 export const Botao = styled.button`
-  background-color: ${(prop) => (prop.disabled ? "#73bbfa" : prop.background)};
+  background-color: ${(prop) => (prop.disabled ? "#a0a7b0" : prop.background)};
   color: ${(prop) => (prop.disable ? "#71717a" : "white")};
   border: 1px solid #aeaeb0;
   margin: 5px 5px; 

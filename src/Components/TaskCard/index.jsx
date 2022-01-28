@@ -3,7 +3,7 @@ import Linha from "../TaskLinha";
 import { v4 as uuidv4 } from "uuid";
 import { useSelector, useDispatch } from "react-redux";
 import { createTask,clearTasks } from "../../store/actions/actions";
-import { Botao, Container, Tasks, Input, LocalBotoes } from "./styles";
+import { Botao, Container, TaskItem, Input, LocalBotoes } from "./styles";
 
 const TaskCard = () => {
   const [tarefa, setTarefa] = useState("");
@@ -38,7 +38,7 @@ const TaskCard = () => {
               </div>
             </Input>
           </span>
-          <Tasks notasks={tasks.length > 0}>
+          <TaskItem notasks={tasks.length > 0}>
             {tasks.length === 0 ? (
               <span>
                 <span>No tasks</span>
@@ -55,7 +55,7 @@ const TaskCard = () => {
                 );
               })
             )}
-          </Tasks>
+          </TaskItem>
         </span>
       </div>
       <LocalBotoes>

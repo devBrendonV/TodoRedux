@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: ${prop => prop.done ? '#86efac' : '#FFF'};
- 
+  background-color: #86efac;
+  font-size:1rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   padding: 10px;
   border-radius: 5px;
@@ -20,7 +20,7 @@ export const Container = styled.div`
     display: block;   
   }
   span:nth-child(1){
-    color: ${prop => prop.done ? 'white' : '#71717a'};
+    color: #fafafa;
     overflow-x: auto;
     overflow-y: hidden;
     font-size: 1.5rem;
@@ -34,6 +34,7 @@ export const Container = styled.div`
   div:nth-child(2){
     display: flex;
     margin-left: 5px;
+    
   }
   
 `;
@@ -46,7 +47,8 @@ export const Botao = styled.button`
   border: 1px solid #a7a7ab;
   width: auto;
   height: auto;
-  color: #555557;
+  font-size: 1rem;
+  color: #fafafa;
   padding: 5px;
   margin: 0 5px;
 `;
