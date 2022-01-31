@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: #dce0de;
+  background-color: #fafafa;
   width: 400px;
   height: 600px;
   border: 0.5px solid #bababa;
@@ -43,7 +43,7 @@ export const Input = styled.div`
     width: 100%;
     font-size:1rem;
     border-radius: 5px;
-    border-color: transparent;
+    border: 0.1rem solid #706c6c;
   }
   div:nth-child(1) {
     display: flex;
@@ -67,4 +67,5 @@ export const Botao = styled.button`
   justify-content: flex-end;
   font-size: 1.2rem;
   border-radius: 5px;
+  cursor: pointer;
 `;

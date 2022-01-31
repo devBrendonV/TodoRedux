@@ -12,7 +12,7 @@ const TaskLinha = (prop) => {
   return (
     <Container key={prop.delete}>
       <div>
-        <span>{prop.task}</span>
+        <div><span>{prop.task}</span></div>
         <div>
           <Botao color={"#f43f5e"} onClick={() => deletarTask(prop.delete)}>
             <i className="fas fa-trash-alt"></i>

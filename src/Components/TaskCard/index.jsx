@@ -54,7 +54,7 @@ const TaskCard = () => {
       </div>
       <LocalBotoes>
         <Botao
-          background={"#0223f5"}
+          background={"#5297f7"}
           disabled={tarefa.trim().length > 0 ? false : true}
           variant="primary"
           onClick={() => criarTask(tarefa)}
@@ -62,7 +62,7 @@ const TaskCard = () => {
           Save item
         </Botao>
         <Botao
-          background={"#f7191e"}
+          background={"#5297f7"}
           disabled={tasks.length > 0 ? false : true}
           variant="primary"
           onClick={() => dispatch(clearTasks())}
